@@ -113,3 +113,27 @@ if ! shopt -oq posix; then
   fi
 fi
 
+### My Customizations ###
+
+# Stop terminal from capturing Ctrl+S
+stty -ixon
+
+# Parent directories
+alias up="cd .."
+alias upp="cd ../.."
+alias uppp="cd ../../.."
+alias upppp="cd ../../../.."
+alias uppppp="cd ../../../../.."
+alias upppppp="cd ../../../../../.."
+alias uppppppp="cd ../../../../../../.."
+
+# Open folders in file manager
+alias of="xdg-open"
+
+# Git shortcuts
+alias gd="git diff"
+alias gdh="git diff HEAD"
+alias gg="git grep"
+alias ggba="git grep -B 2 -A 2"
+alias gl="git log"
+alias gstat="git status"
