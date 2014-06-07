@@ -131,7 +131,9 @@ alias uppppppp="cd ../../../../../../.."
 alias of="xdg-open"
 
 # Git shortcuts
+alias gcm="git commit -m"
 alias gd="git diff"
+alias gdc="git diff --cached"
 alias gdh="git diff HEAD"
 alias gg="git grep"
 alias ggba="git grep -B 2 -A 2"
