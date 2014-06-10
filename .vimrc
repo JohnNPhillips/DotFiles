@@ -1,4 +1,5 @@
 " Interface
+set autoread            " Auto-reload changed files
 set number              " Show line numbers
 set ruler               " Show cursor position
 set showcmd             " Show current command being typed
