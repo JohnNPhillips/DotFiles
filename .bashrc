@@ -138,4 +138,4 @@ alias gdh="git diff HEAD"
 alias gg="git grep"
 alias ggba="git grep -B 2 -A 2"
 alias gl="git log"
-alias gstat="git status"
+alias gs="git status" # Note - Overrides ghostscript
