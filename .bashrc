@@ -137,5 +137,8 @@ alias gdc="git diff --cached"
 alias gdh="git diff HEAD"
 alias gg="git grep"
 alias ggba="git grep -B 2 -A 2"
-alias gl="git log"
+alias gl="git log --decorate"
+alias glg="gl --graph"
+alias glga="glg --all"
 alias gs="git status" # Note - Overrides ghostscript
+
