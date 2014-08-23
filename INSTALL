@@ -2,6 +2,8 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cp $DIR/.bashrc ~/.bashrc
-cp $DIR/.vimrc ~/.vimrc
+mv ~/.bashrc ~/.bashrc.bak
+mv ~/.vimrc ~/.vimrc.bak
+ln -s $DIR/.bashrc ~/.bashrc
+ln -s $DIR/.vimrc ~/.vimrc
 
