@@ -141,4 +141,5 @@ alias gl="git log --decorate"
 alias glg="gl --graph"
 alias glga="glg --all"
 alias gs="git status" # Note - Overrides ghostscript
+alias gsl="git stash list"
 
