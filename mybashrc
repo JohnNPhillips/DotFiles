@@ -47,3 +47,7 @@ esac
 source ~/.dotfiles/aliases
 source ~/.dotfiles/git-completion.bash
 
+if [ -f ~/.dotfiles/local_bashrc ]; then
+    source ~/.dotfiles/local_bashrc
+fi
+
