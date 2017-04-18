@@ -36,6 +36,7 @@ alias gr="(git log | head -1| grep -oE '\w{40}' | perl -ne 'chomp and print' | p
 
 # ls shortcuts
 alias ll="ls -l"
+alias lla="ls -la"
 alias la="ls -a"
 
 # hadoop fs
@@ -67,4 +68,5 @@ alias hftouch="hf -touchz"                                   # Create a file of 
 # misc
 alias be="bundle exec"
 alias ff="find . | grep"
+alias grep="grep --color=auto"
 
