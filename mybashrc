@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+source ~/.dotfiles/aliases
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -53,7 +55,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-source ~/.dotfiles/aliases
 source ~/.dotfiles/git-completion.bash
 
 if [ -f ~/.dotfiles/local_bashrc ]; then
