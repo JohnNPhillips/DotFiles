@@ -11,15 +11,60 @@ alias uppppppp="cd ../../../../../../.."
 alias of="xdg-open"
 
 # Git shortcuts
+alias gb="git branch"
+alias gca="git commit --amend"
+alias gcane="gca --no-edit"
 alias gcm="git commit -m"
+alias gco="git checkout"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gdh="git diff HEAD"
+alias gdh1="git diff HEAD~1"
+alias gdmf="git diff master..."
 alias gg="git grep"
 alias ggba="git grep -B 2 -A 2"
 alias gl="git log --decorate"
 alias glg="gl --graph"
 alias glga="glg --all"
+alias gpob='git push origin $(git rev-parse --abbrev-ref HEAD)'
 alias gs="git status" # Note - Overrides ghostscript
 alias gsl="git stash list"
+alias gssp="git stash show -p"
+
+# Compound git shortcuts
+alias gr="(git log | head -1| grep -oE '\w{40}' | perl -ne 'chomp and print' | pbcopy) && (git log | head -6)"
+
+# ls shortcuts
+alias ll="ls -l"
+alias la="ls -a"
+
+# hadoop fs
+alias hf="hadoop fs"                                         # Base Hadoop fs command
+alias hfcat="hf -cat"                                        # Output a file to standard out
+alias hfchgrp="hf -chgrp"                                    # Change group association of files
+alias hfchmod="hf -chmod"                                    # Change permissions
+alias hfchown="hf -chown"                                    # Change ownership
+alias hfcfl="hf -copyFromLocal"                              # Copy a local file reference to HDFS
+alias hfctl="hf -copyToLocal"                                # Copy a HDFS file reference to local
+alias hfcp="hf -cp"                                          # Copy files from source to destination
+alias hfdu="hf -du"                                          # Display aggregate length of files
+alias hfdus="hf -dus"                                        # Display a summary of file lengths
+alias hfget="hf -get"                                        # Get a file from hadoop to local
+alias hfgetm="hf -getmerge"                                  # Get files from hadoop to a local file
+alias hfls="hf -ls"                                          # List files
+alias hfll="hf -lsr"                                         # List files recursivly
+alias hfmkdir="hf -mkdir"                                    # Make a directory
+alias hfmv="hf -mv"                                          # Move a file
+alias hfput="hf -put"                                        # Put a file from local to hadoop
+alias hfrm="hf -rm"                                          # Remove a file
+alias hfrmr="hf -rmr"                                        # Remove a file recursivly
+alias hfsr="hf -setrep"                                      # Set the replication factor of a file
+alias hfstat="hf -stat"                                      # Returns the stat information on the path
+alias hftail="hf -tail"                                      # Tail a file
+alias hftest="hf -test"                                      # Run a series of file tests. See options
+alias hftouch="hf -touchz"                                   # Create a file of zero length
+
+# misc
+alias be="bundle exec"
+alias ff="find . | grep"
 
