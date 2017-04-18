@@ -118,28 +118,3 @@ fi
 # Stop terminal from capturing Ctrl+S
 stty -ixon
 
-# Parent directories
-alias up="cd .."
-alias upp="cd ../.."
-alias uppp="cd ../../.."
-alias upppp="cd ../../../.."
-alias uppppp="cd ../../../../.."
-alias upppppp="cd ../../../../../.."
-alias uppppppp="cd ../../../../../../.."
-
-# Open folders in file manager
-alias of="xdg-open"
-
-# Git shortcuts
-alias gcm="git commit -m"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gdh="git diff HEAD"
-alias gg="git grep"
-alias ggba="git grep -B 2 -A 2"
-alias gl="git log --decorate"
-alias glg="gl --graph"
-alias glga="glg --all"
-alias gs="git status" # Note - Overrides ghostscript
-alias gsl="git stash list"
-
