@@ -65,6 +65,10 @@ alias hftail="hf -tail"                                      # Tail a file
 alias hftest="hf -test"                                      # Run a series of file tests. See options
 alias hftouch="hf -touchz"                                   # Create a file of zero length
 
+# text shortcuts
+alias to_lower="tr '[A-Z]' '[a-z]'"
+alias to_upper="tr '[a-z]' '[A-Z]'"
+
 # misc
 alias be="bundle exec"
 alias ff="find . | grep"
