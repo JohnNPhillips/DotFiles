@@ -33,6 +33,10 @@ alias gssp="git stash show -p"
 
 # Compound git shortcuts
 alias gr="(git log | head -1| grep -oE '\w{40}' | perl -ne 'chomp and print' | pbcopy) && (git log | head -6)"
+alias sau="(git stash save 'temp' && git pull --rebase && git stash pop)"
+
+# Other git aliases
+alias git_search_all="git log --source --all -S"
 
 # ls shortcuts
 alias ll="ls -l"
