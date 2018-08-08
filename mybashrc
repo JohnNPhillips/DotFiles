@@ -47,9 +47,13 @@ fi
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+function get_host {
+    cat ~/.dotfiles/custom_host.txt 2> /dev/null || echo "\h"
+}
+alias set_prompt_host="vim ~/.dotfiles/custom_host.txt"
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\033[01;35m\]\u@\h:\[\033[01;34m\]\$(parse_git_branch) \[\033[01;32m\]\w \[\033[01;34m\]\n>\[\e[0m\] "
+    PS1="\[\033[01;35m\]\u@$(get_host):\[\033[01;34m\]\$(parse_git_branch) \[\033[01;32m\]\w \[\033[01;34m\]\n>\[\e[0m\] "
     ;;
 *)
     ;;
