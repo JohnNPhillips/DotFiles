@@ -75,6 +75,7 @@ alias to_lower="tr '[A-Z]' '[a-z]'"
 alias to_upper="tr '[a-z]' '[A-Z]'"
 
 # misc
+alias src="source ~/.dotfiles/mybashrc"
 alias be="bundle exec"
 alias ff="find . | grep"
 alias grep="grep --color=auto"
