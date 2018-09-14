@@ -45,7 +45,10 @@ alias lla="ls -la"
 alias la="ls -a"
 
 # hadoop fs
-alias hf="hadoop fs"                                         # Base Hadoop fs command
+function hf() {
+    # Base Hadoop command (filtering out all SLF4J messages from stderr)
+    hadoop fs $@ 3>&1 1>&2 2>&3 3>&- | grep -v '^SLF4J'
+}
 alias hfcat="hf -cat"                                        # Output a file to standard out
 alias hfchgrp="hf -chgrp"                                    # Change group association of files
 alias hfchmod="hf -chmod"                                    # Change permissions
