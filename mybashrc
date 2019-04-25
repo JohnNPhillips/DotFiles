@@ -77,6 +77,9 @@ function parse_git_dirty {
         echo ""
     fi
 }
+function disable_git_dirty {
+    function parse_git_dirty { true; }
+}
 function parse_git_branch {
     dirty_flags="$(parse_git_dirty)"
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \\(.*\\)/(\\1${dirty_flags})/"
