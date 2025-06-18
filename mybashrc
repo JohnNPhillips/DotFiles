@@ -26,7 +26,9 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+if [ -x /usr/bin/lesspipe ] && [ -z "$LESSOPEN" ]; then
+    eval "$(SHELL=/bin/sh lesspipe)"
+fi
 
 # Stop terminal from capturing Ctrl+S
 stty -ixon
@@ -36,7 +38,9 @@ export CLICOLOR=1
 
 # enable color support of ls on Ubuntu
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    if [ -z "$LS_COLORS" ]; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    fi
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
